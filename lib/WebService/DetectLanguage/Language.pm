@@ -178,7 +178,7 @@ sub _build_name
 {
     my $self = shift;
 
-    return $code2name{ $self->code };
+    return $code2name{ $self->code } // "UNKNOWN";
 }
 
 1;
