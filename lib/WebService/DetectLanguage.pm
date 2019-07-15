@@ -33,6 +33,7 @@ sub _get
     if (not $response->{success}) {
         die "failed $response->{status} $response->{reason}\n";
     }
+
     return decode_json($response->{content});
 }
 
@@ -49,7 +50,7 @@ sub multi_detect
     my ($self, @strings) = @_;
     my $url              = $self->base_url."/detect";
     my $headers          = { "Authorization" => "Bearer ".$self->key };
-    my $form_data        = { 'q[]' => \@strings };
+    my $form_data        = [ 'q[]' => \@strings ];
     my $response         = $self->ua->post_form($url, $form_data, { headers => $headers });
 
     if (not $response->{success}) {
@@ -91,7 +92,6 @@ sub languages
 sub account_status
 {
     my $self   = shift;
-    # my $result = $self->_request("user/status");
     my $result = $self->_get("user/status");
 
     require WebService::DetectLanguage::AccountStatus;

@@ -1,5 +1,9 @@
 Revision history for Perl module WebService::DetectLanguage
 
+0.03 2019-07-15 NEILB
+    - Bugfix: due to HTTP::Tiny's post_form() behaviour, multiple strings
+      weren't always being passed in the expected order.
+
 0.02 2019-07-12 NEILB
     - Added a bunch more documentation
 
