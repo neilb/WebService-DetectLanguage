@@ -169,6 +169,11 @@ if the first result is reliable enough to go with.
    # we'll go with that!
  }
 
+There will only ever be at most one result with C<is_reliable>
+set to a true value.
+If you get multiple results, they're always in decreasing order
+of reliability.
+
 Each result also includes a confidence value,
 which looks a bit like a percentage,
 but L<their FAQ|https://detectlanguage.com/faq#confidence>
