@@ -1,6 +1,6 @@
 package WebService::DetectLanguage;
 
-use 5.006;
+use 5.010;
 use Moo;
 use JSON::MaybeXS;
 
