@@ -2,6 +2,7 @@ Revision history for Perl module WebService::DetectLanguage
 
 0.04 2019-07-17 NEILB
     - Require 5.010 -- I use // in multiple places
+    - Added doc for ::Language and ::AccountStatus modules
 
 0.03 2019-07-15 NEILB
     - Bugfix: due to HTTP::Tiny's post_form() behaviour, multiple strings
